@@ -9,11 +9,12 @@ export default class BrandsController {
    public async store({request, response}: HttpContextContract) {
       try {
          const data: object = request.body()
+
          await Brand.create(data)
          return response.json({
             success: true,
             data: [],
-            message: 'Brand created correctly',
+            message: 'Brand created successfully',
             status_code: 200
          })
       } catch (e) {
@@ -30,7 +31,7 @@ export default class BrandsController {
       return response.json({
          success: true,
          data: brand,
-         message: 'Brand detailed correctly',
+         message: 'Brand detailed successfully',
          status_code: 200
       })
    }
@@ -44,7 +45,7 @@ export default class BrandsController {
       return response.json({
          success: true,
          data: brand,
-         message: 'Brand detailed correctly',
+         message: 'Brand detailed successfully',
          status_code: 200
       })
    }
@@ -64,7 +65,7 @@ export default class BrandsController {
       return response.json({
          success: true,
          data: [],
-         message: 'Brand updated correctly',
+         message: 'Brand updated successfully',
          status_code: 200
       })
    }
@@ -80,7 +81,7 @@ export default class BrandsController {
       return response.json({
          success: true,
          data: [],
-         message: 'Brand deleted correctly',
+         message: 'Brand deleted successfully',
          status_code: 200
       })
    }
