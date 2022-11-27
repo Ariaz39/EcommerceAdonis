@@ -74,7 +74,8 @@ export default class BrandsController {
 
       if (!brand) throw new Error('The brand does not exist.')
 
-      await brand.delete()
+      brand.status = '2'
+      await brand.save()
 
       return response.json({
          success: true,
